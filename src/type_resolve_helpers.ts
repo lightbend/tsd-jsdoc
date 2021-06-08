@@ -218,7 +218,7 @@ export function generateTree(name: string, parent: StringTreeNode | null = null)
 
             const endAt = templateIndex < 0 ? parts.length : templateIndex;
             const [name, qualifier] = parts.slice(i + 2, endAt).join('').split('~');
-            const node = new ModuleTreeNode(name, ENodeType.MODULE, parent, qualifier.replace(/\.$/, ''));
+            const node = new ModuleTreeNode(name, ENodeType.MODULE, parent, qualifier ? qualifier.replace(/\.$/, '') : '');
             if (generic)
                 generateTree(generic, node);
             if (!parent)
