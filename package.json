@@ -6,6 +6,7 @@
   "author": "Chad Engler <chad@pantherdev.com>",
   "license": "MIT",
   "repository": {
+    "type": "git",
     "url": "git://github.com/lightbend/tsd-jsdoc.git"
   },
   "scripts": {
